@@ -1,6 +1,8 @@
-ARG PHP_IMAGE=8.1-cli-alpine3.19
+ARG PHP_IMAGE=8.3-cli-alpine3.23
 
 FROM --platform=${TARGETPLATFORM:-linux/amd64} php:${PHP_IMAGE}
+
+LABEL org.opencontainers.image.source="https://github.com/bulgac/docker-php-grpc"
 
 ENV TZ="UTC"
 
